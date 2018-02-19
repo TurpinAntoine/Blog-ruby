@@ -1,0 +1,42 @@
+fr:
+ views:
+    index:
+      home:
+        welcome: "Un blog pour les chercheurs d'emplois"
+        id: "Bonjour"
+        latest: "Les dernières offres"
+        link: 'Voir'
+      jobs:
+        job: 'Offre'
+        salary: 'Salaire'
+        by: 'Par'
+      users:
+        link: "Voir l'offre"
+    new:
+      jobs:
+        offer: "Créer une nouvelle offre d'emploi"
+        title: 'Titre'
+        company: 'Entreprise'
+        salary: 'Salaire'
+        submit: 'Envoyer'
+    show:
+      jobs:
+        salary: 'Salaire'
+        company: 'Entreprise'
+        delete: 'Supprimer'
+        comment: 'Commenter quelque chose'
+        submit: 'Envoyer'
+        section: 'Section commentaire'
+        by: 'Par'
+        deletecomment: 'Supprimer le commentaire'
+      users:
+        my: 'Mes offres'
+        link: 'Voir'
+    error:
+    menu:
+      home: 'Accueil'
+      all_jobs: 'Toutes les offres'
+      all_users: 'Tous les utilisateurs'
+      my_jobs: 'Mes offres'
+      create_job: 'Créer une offre'
+      sign_out: 'Se déconnecter'

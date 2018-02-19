@@ -1,0 +1,42 @@
+en:
+ views:
+    index:
+      home:
+        welcome: 'A blog for jobs seekers'
+        id: 'Hello'
+        latest: 'Latest articles'
+        link: 'Go to'
+      jobs:
+        job: 'Job'
+        salary: 'Salary'
+        by: 'By'
+      users:
+        link: 'See job'
+    new:
+      jobs:
+        offer: "Create a new job"
+        title: 'Title'
+        company: 'Company'
+        salary: 'Salary'
+        submit: 'Submit'
+    show:
+      jobs:
+        salary: 'Salary'
+        company: 'Company'
+        delete: 'Delete'
+        comment: 'Comment something'
+        submit: 'Submit'
+        section: 'Comment section'
+        by: 'By'
+        deletecomment: 'Delete this comment'
+      users:
+        my: 'My jobs'
+        link: 'Go to'
+    error:
+    menu:
+      home: 'Home'
+      all_jobs: 'All jobs'
+      all_users: 'All users'
+      my_jobs: 'My jobs'
+      create_job: 'Create job'
+      sign_out: 'Sign out'

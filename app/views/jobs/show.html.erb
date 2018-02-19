@@ -1,0 +1,45 @@
+<h1><%= @job.title %></h1>
+<p><strong>Description :</strong> <%= @job.description %></p>
+<p><strong><%= t('views.show.jobs.salary') %> :</strong> <%= @job.salaire_moyen %></p>
+<p><strong><%= t('views.show.jobs.company') %> :</strong> <%= @job.company_name %></p>
+
+<br>
+
+<% if @job.user_id === (current_user.id).to_s %>
+  <%= link_to t('views.show.jobs.delete'), job_path(@job), method: :delete, class: 'waves-effect waves-light btn red' %>
+<% end %>
+<br>
+<hr>
+
+<h4><%= t('views.show.jobs.comment') %> : </h4>
+<%= form_for @comment do |f| %>
+
+  <%= f.label t('views.show.jobs.comment') %> <br>
+  <%= f.text_area :comment, placeholder: t('views.show.jobs.comment'), required: true %> <br>
+  <%= f.hidden_field :user_name, value: current_user.username %> <br>
+  <%= f.hidden_field :job_id, value: @job.id %> <br>
+  <%= f.hidden_field :user_id, value: current_user.id %> <br>
+  <br>
+  <%= f.submit t('views.show.jobs.submit'), :class => 'waves-effect waves-light btn' %> <br>
+
+<% end %>
+
+<br>
+
+<h3 class="light-blue-text"><%= t('views.show.jobs.section') %></h3>
+<hr>
+<br>
+
+<% @comments.each do |com| %>
+
+  <div><%= com.comment %></div>
+  <div><%= t('views.show.jobs.by') %> : <%= com.user_name %></div>
+
+  <% if current_user == com.user || current_user == @job.user %>
+  <%= link_to t('views.show.jobs.deletecomment'), comment_path(com), method: :delete, class: 'waves-effect waves-light btn red' %>
+  <% end %>
+
+  <hr>
+  <br>
+
+<% end %>

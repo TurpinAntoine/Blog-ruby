@@ -1,0 +1,21 @@
+<h1>All Jobs</h1>
+
+<ul>
+
+    <% @jobs.each do |job| %>
+
+    <li><strong><%= t('views.index.jobs.job') %> : </strong> <%= job.title %></li>
+    <li><strong>Description :</strong> <%= job.description %></li>
+    <li><strong><%= t('views.index.jobs.salary') %> : </strong> <%= job.salaire_moyen %>€</li>
+    <li><strong><%= t('views.index.jobs.by') %> : </strong> <%= job.company_name %></li>
+
+    <br>
+    <%= link_to t('views.index.home.link'), job_path(job.id) %>
+    <br>
+    <hr>
+
+    <% end %>
+
+</ul>
+
+

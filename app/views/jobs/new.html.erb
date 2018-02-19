@@ -1,0 +1,20 @@
+<h1><%= t('views.new.jobs.offer') %> : </h1>
+<%= form_for @job do |f| %>
+
+  <%= f.label t('views.new.jobs.title') %> <br>
+  <%= f.text_field :title, placeholder: t('views.new.jobs.title'), required: true %> <br>
+
+  <%= f.label 'Description' %> <br>
+  <%= f.text_area :description, placeholder: 'Description', required: true %> <br>
+
+  <%= f.label t('views.new.jobs.company') %> <br>
+  <%= f.text_field :company_name, placeholder: t('views.new.jobs.company') %> <br>
+
+  <%= f.label t('views.new.jobs.salary') %> <br>
+  <%= f.text_field :salaire_moyen, placeholder: t('views.new.jobs.salary') %> <br>
+
+  <%= f.hidden_field :user_id, value: current_user.id %> <br>
+
+  <%= f.submit t('views.new.jobs.submit'), :class => 'waves-effect waves-light btn' %> <br>
+
+<% end %>
